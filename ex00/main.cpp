@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbrochar <sbrochar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/26 17:33:47 by sbrochar          #+#    #+#             */
-/*   Updated: 2026/03/04 15:37:01 by sbrochar         ###   ########.fr       */
+/*   Created: 2026/03/04 15:27:21 by sbrochar          #+#    #+#             */
+/*   Updated: 2026/03/04 15:36:32 by sbrochar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-void Zombie::announce()
+int main()
 {
-	std::cout << name << " BraiiiiiiinnnzzzZ..." << std::endl;
+	Zombie *my_zombie;
+	randomChump("Max");
+	my_zombie = newZombie("Salome");
+	my_zombie->announce();
+	delete my_zombie;
 }
-Zombie::Zombie(std::string name)
-{
-	this->name = name;
-}
-
-Zombie::~Zombie()
-{
-	std::cout << name << " left us today, rest in peace little zombie..." << std::endl;
-}
-

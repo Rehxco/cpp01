@@ -1,34 +1,43 @@
-NAME = PhoneBook
-
+NAME = BraiiiiiiinnnzzzZ 
 
 SOURCES = Zombie.cpp \
 		  newZombie.cpp \
-		  randomChump.cpp
+		  randomChump.cpp \
+		  main.cpp 
 
-HEADER = Zombie.hpp
+HEADER = Zombie.hpp 
 
-OBJECTS = $(SOURCES:.cpp=.o)
+OBJ_DIR = obj
 
-CC = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+OBJECTS = $(SOURCES:%.cpp=$(OBJ_DIR)/%.o)
 
-RM = rm -f
+CC = c++ 
 
-all: $(NAME)
+CFLAGS = -Wall -Wextra -Werror -std=c++98 
+
+RM = rm -rf 
+
+all: $(NAME) 
+
 
 $(NAME): $(OBJECTS)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJECTS)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJECTS) 
 
-%.o: %.cpp $(HEADER)
-	$(CC) $(CFLAGS) -c $< -o $@
+
+$(OBJ_DIR)/%.o: %.cpp $(HEADER) | $(OBJ_DIR)
+	$(CC) $(CFLAGS) -c $< -o $@ 
+
+
+$(OBJ_DIR):
+	mkdir -p $(OBJ_DIR)
 
 clean: 
-	$(RM) $(OBJECTS)
+	$(RM) $(OBJ_DIR) 
 
 fclean: clean
-	$(RM) $(NAME)
+	$(RM) $(NAME) 
 
-re: fclean all
+re: fclean all 
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re 

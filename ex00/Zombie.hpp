@@ -6,7 +6,7 @@
 /*   By: sbrochar <sbrochar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 17:34:12 by sbrochar          #+#    #+#             */
-/*   Updated: 2026/02/27 15:57:33 by sbrochar         ###   ########.fr       */
+/*   Updated: 2026/03/04 11:49:34 by sbrochar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ class Zombie
 	void announce();
 };
 Zombie	*newZombie(std::string name);
+void	randomChump(std::string name);
 
 #endif
