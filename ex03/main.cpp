@@ -6,21 +6,31 @@
 /*   By: sbrochar <sbrochar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/04 15:27:21 by sbrochar          #+#    #+#             */
-/*   Updated: 2026/03/05 14:09:44 by sbrochar         ###   ########.fr       */
+/*   Updated: 2026/03/09 13:53:46 by sbrochar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
+
 
 int	main(void)
 {
-	Zombie *tab_zombie;
-
-	int N = 5;
-	tab_zombie = zombieHorde(N, "Salome");
-	for (int i = 0; i < N; i++)
 	{
-		tab_zombie[i].announce();
+		Weapon club = Weapon("crude spiked club");
+		HumanA bob("Bob", club);
+		bob.attack();
+		club.setType("some other type of club");
+		bob.attack();
 	}
-	delete[] tab_zombie;
+	{
+		Weapon club = Weapon("crude spiked club");
+		HumanB jim("Jim");
+		jim.setWeapon(club);
+		jim.attack();
+		club.setType("some other type of club");
+		jim.attack();
+	}
+	return (0);
 }

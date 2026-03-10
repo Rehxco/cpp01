@@ -1,10 +1,13 @@
-NAME = zombieHorde
+NAME = weapon
 
-SOURCES = Zombie.cpp \
-		  zombieHorde.cpp \
+SOURCES = Weapon.cpp \
+		  HumanB.cpp \
+		  HumanA.cpp \
 		  main.cpp 
 
-HEADER = Zombie.hpp 
+HEADER = Weapon.hpp \
+		  HumanB.hpp \
+		  HumanA.hpp \
 
 OBJ_DIR = obj
 
