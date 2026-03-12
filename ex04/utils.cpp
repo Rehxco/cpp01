@@ -6,7 +6,7 @@
 /*   By: sbrochar <sbrochar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/10 19:14:47 by sbrochar          #+#    #+#             */
-/*   Updated: 2026/03/10 20:24:15 by sbrochar         ###   ########.fr       */
+/*   Updated: 2026/03/11 18:01:07 by sbrochar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ size_t	search(std::string s1, std::string str, size_t pos)
 
 std::string replace(std::string s1, std::string s2, std::string str)
 {
-	size_t len_str = str.length();
 	size_t len_s1 = s1.length();
 	size_t start = search(s1, str, 0);
 	std::string new_str_start;

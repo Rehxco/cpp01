@@ -1,13 +1,9 @@
-NAME = weapon
+NAME = gnl
 
-SOURCES = Weapon.cpp \
-		  HumanB.cpp \
-		  HumanA.cpp \
-		  main.cpp 
+SOURCES =  main.cpp \
+		   utils.cpp \
 
-HEADER = Weapon.hpp \
-		  HumanB.hpp \
-		  HumanA.hpp \
+HEADER =  utils.hpp \
 
 OBJ_DIR = obj
 
